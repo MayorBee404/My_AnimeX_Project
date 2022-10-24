@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">My AnimeX</string>
+
+    <string name="menu_home">Beranda</string>
+    <string name="menu_favorite">Favorit</string>
+    <string name="menu_setting">Pengaturan</string>
+    <string name="something_wrong">Oops.. ada sesuatu yang salah</string>
+    <string name="no_data">Data kosong</string>
+    <string name="search">Cari</string>
+
+    <string name="image_description">Gambar</string>
+    <string name="text_primary">Sample of title text</string>
+    <string name="text_subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae eaque iste nobis non quasi ratione veritatis. Accusantium assumenda, cum delectus deserunt dignissimos doloribus ea error esse et ex explicabo fuga ipsa ipsum omnis optio perferendis provident quaerat quam sequi unde? At deleniti dignissimos exercitationem iure officiis perspiciatis rerum tenetur, vitae?</string>
+    <string name="watch_trailer">Watch Trailer</string>
+    <string name="title_favorite">Favorite</string>
+    <string name="details">Details</string>
+    <string name="synopsis">Synopsis</string>
+    <string name="seekpng">seekpng</string>
+    <string name="title_favourite">Favourite</string>
+    <string name="title_favourites">Favourites</string>
+    <string name="language">Ganti Bahasa</string>
+    <string name="translate">Bahasa</string>
+    <string name="about">Tentangt</string>
+    <string name="about_animex">"Tentang API MyAnimex "</string>
+    <string name="about_ani">About MyAnimex</string>
+</resources>

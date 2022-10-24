@@ -1,0 +1,29 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:backgroundTint="@color/primaryColor">
+    <PreferenceCategory app:title="@string/translate"
+       android:textColor="@color/black" >
+
+        <Preference
+            app:key="language"
+            app:title="@string/language"
+            app:useSimpleSummaryProvider="true"
+            app:icon="@drawable/ic_language"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/about">
+
+        <Preference
+            app:key="sync"
+            app:icon="@drawable/ic_android"
+            app:title="@string/about_ani">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://kitsu.docs.apiary.io" />
+        </Preference>
+
+
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
