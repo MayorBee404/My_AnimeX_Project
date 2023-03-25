@@ -17,8 +17,6 @@
     <string name="seekpng">seekpng</string>
     <string name="language">Change Language</string>
     <string name="translate">Translates</string>
-    <string name="messages_header">Messages</string>
     <string name="about">About</string>
-    <string name="about_animex">"About API MyAnimex "</string>
     <string name="about_ani">About MyAnimex</string>
 </resources>
