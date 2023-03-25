@@ -20,7 +20,6 @@
     <string name="title_favourites">Favourites</string>
     <string name="language">Ganti Bahasa</string>
     <string name="translate">Bahasa</string>
-    <string name="about">Tentangt</string>
-    <string name="about_animex">"Tentang API MyAnimex "</string>
+    <string name="about">About</string>
     <string name="about_ani">About MyAnimex</string>
 </resources>
