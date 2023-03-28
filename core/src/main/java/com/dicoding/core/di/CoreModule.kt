@@ -1,7 +1,6 @@
 package com.dicoding.core.di
 
 import androidx.room.Room
-import com.dicoding.core.BuildConfig.DEBUG
 import com.dicoding.core.data.source.local.room.AnimeDatabase
 import com.dicoding.core.data.source.remote.RemoteDataSource
 import com.dicoding.core.data.source.remote.network.ApiService
@@ -9,6 +8,7 @@ import com.dicoding.core.domain.repository.IAnimeRepository
 import com.dicoding.core.utils.AppExecutors
 import net.sqlcipher.database.SQLiteDatabase
 import net.sqlcipher.database.SupportFactory
+import okhttp3.CertificatePinner
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.android.ext.koin.androidContext
@@ -34,12 +34,17 @@ val databaseModule = module {
 
 val networkModule = module {
     single {
-        val loggingInterceptor =
-            if (DEBUG) HttpLoggingInterceptor.Level.BODY else HttpLoggingInterceptor.Level.NONE
+        val hostname = "*.kitsu.io"
+        val certificatePinner = CertificatePinner.Builder()
+            .add(hostname, "sha256/pHTDbVIbFqUvjCs90xjARuv/jZtaVj8QeH/Xd11ZyE8=")
+            .add(hostname, "sha256/qPerI4uMwY1VrtRE5aBY8jIQJopLUuBt2+GDUWMwZn4=")
+            .add(hostname, "sha256/iie1VXtL7HzAMF+/PVPR9xzT80kQxdZeJ+zduCB3uj0=")
+            .build()
         OkHttpClient.Builder()
-            .addInterceptor(HttpLoggingInterceptor().setLevel(loggingInterceptor))
+            .addInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
             .connectTimeout(120, TimeUnit.SECONDS)
             .readTimeout(120, TimeUnit.SECONDS)
+            .certificatePinner(certificatePinner)
             .build()
 
     }
