@@ -37,10 +37,10 @@ class FavouriteFragment : Fragment() {
             val animeAdapter = AnimeAdapter { item -> showDetail(item) }
             (activity as MainActivity).supportActionBar?.title = getString(com.dicoding.myanimex.R.string.menu_favorite)
 
-            viewModel.favoriteAnime.observe(viewLifecycleOwner, { anime ->
+            viewModel.favoriteAnime.observe(viewLifecycleOwner) { anime ->
                 animeAdapter.setData(anime)
                 view_empty.visibility = if (anime.isNotEmpty()) View.GONE else View.VISIBLE
-            })
+            }
 
             with(rv_anime) {
                 layoutManager = GridLayoutManager(requireContext(), 2)

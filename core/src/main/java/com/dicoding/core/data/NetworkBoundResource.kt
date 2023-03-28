@@ -1,3 +1,4 @@
+
 package com.dicoding.core.data
 
 
@@ -6,29 +7,30 @@ import kotlinx.coroutines.flow.*
 
 abstract class NetworkBoundResource<ResultType, RequestType> {
 
-    private var result: Flow<com.dicoding.core.data.Resource<ResultType>> = flow {
-        emit(com.dicoding.core.data.Resource.Loading())
+    private var result: Flow<Resource<ResultType>> = flow {
+        emit(Resource.Loading())
         val dbSource = loadFromDB().first()
         if (shouldFetch(dbSource)) {
-            emit(com.dicoding.core.data.Resource.Loading())
+            emit(Resource.Loading())
             when (val apiResponse = createCall().first()) {
                 is ApiResponse.Success -> {
                     saveCallResult(apiResponse.data)
-                    emitAll(loadFromDB().map { com.dicoding.core.data.Resource.Success(it) })
+                    emitAll(loadFromDB().map { Resource.Success(it) })
                 }
                 is ApiResponse.Empty -> {
-                    emitAll(loadFromDB().map { com.dicoding.core.data.Resource.Success(it) })
+                    emitAll(loadFromDB().map { Resource.Success(it) })
                 }
                 is ApiResponse.Error -> {
                     onFetchFailed()
-                    emit(com.dicoding.core.data.Resource.Error(apiResponse.errorMessage, null))
+                    emit(Resource.Error(apiResponse.errorMessage, null))
                 }
             }
         } else {
-            emitAll(loadFromDB().map { com.dicoding.core.data.Resource.Success(it) })
+            emitAll(loadFromDB().map { Resource.Success(it) })
         }
     }
 
+    @Suppress("EmptyMethod")
     protected open fun onFetchFailed() {}
 
     protected abstract fun loadFromDB(): Flow<ResultType>
@@ -39,5 +41,5 @@ abstract class NetworkBoundResource<ResultType, RequestType> {
 
     protected abstract suspend fun saveCallResult(data: RequestType)
 
-    fun asFlow(): Flow<com.dicoding.core.data.Resource<ResultType>> = result
+    fun asFlow(): Flow<Resource<ResultType>> = result
 }

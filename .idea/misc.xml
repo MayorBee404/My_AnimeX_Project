@@ -37,6 +37,127 @@
       </map>
     </option>
   </component>
+  <component name="EntryPointsManager">
+    <entry_points version="2.0">
+      <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/dicoding/myanimex/binding/ActivityBinding.kt" />
+      <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/dicoding/myanimex/di/AppModule.kt" />
+      <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/dicoding/myanimex/binding/BindingAdapters.kt" />
+      <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/core/src/main/java/com/dicoding/core/binding/BindingAdapters.kt" />
+      <entry_point TYPE="method" FQNAME="com.dicoding.myanimex.binding.ActivityBindingKt void bindToolbarWithTitle(androidx.appcompat.widget.Toolbar toolbar, androidx.appcompat.app.AppCompatActivity activity, java.lang.String title)" />
+      <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/core/src/main/java/com/dicoding/core/di/CoreModule.kt" />
+      <entry_point TYPE="field" FQNAME="com.dicoding.core.di.CoreModuleKt databaseModule" />
+      <entry_point TYPE="field" FQNAME="com.dicoding.myanimex.detail.DetailAnimeActivity detailViewModel$delegate" />
+      <entry_point TYPE="field" FQNAME="com.dicoding.myanimex.home.HomeFragment homeViewModel$delegate" />
+      <entry_point TYPE="field" FQNAME="com.dicoding.core.di.CoreModuleKt networkModule" />
+      <entry_point TYPE="field" FQNAME="com.dicoding.core.di.CoreModuleKt repositoryModule" />
+      <entry_point TYPE="method" FQNAME="com.dicoding.core.data.AnimeRepository$-1 java.lang.Object saveCallResult(java.util.List&lt;com.dicoding.core.data.source.remote.response.AnimeResponse&gt; data, kotlin.coroutines.Continuation&lt;? super kotlin.Unit&gt; $completion)" />
+      <entry_point TYPE="method" FQNAME="com.dicoding.myanimex.binding.BindingAdaptersKt void setRating(android.widget.RatingBar ratingBar, double rating)" />
+      <entry_point TYPE="method" FQNAME="com.dicoding.myanimex.binding.BindingAdaptersKt void setRatingText(android.widget.TextView text, double rating)" />
+      <entry_point TYPE="method" FQNAME="com.dicoding.core.data.AnimeRepository$-1 boolean shouldFetch(java.util.List&lt;com.dicoding.core.domain.model.Anime&gt; data)" />
+      <entry_point TYPE="method" FQNAME="com.dicoding.myanimex.binding.BindingAdaptersKt void showImage(android.widget.ImageView imgView, java.lang.String url)" />
+      <entry_point TYPE="method" FQNAME="com.dicoding.core.binding.BindingAdaptersKt void showImage(android.widget.ImageView imgView, java.lang.String url)" />
+      <entry_point TYPE="method" FQNAME="com.dicoding.myanimex.binding.ActivityBindingKt void simpleToolbarWithHome(androidx.appcompat.app.AppCompatActivity $this$simpleToolbarWithHome, androidx.appcompat.widget.Toolbar toolbar, java.lang.String title_)" />
+      <entry_point TYPE="field" FQNAME="com.dicoding.myanimex.SplashScreen SPLASH_DELAY" />
+      <entry_point TYPE="method" FQNAME="com.dicoding.myanimex.binding.BindingAdaptersKt void startDate(android.widget.TextView textView, java.lang.String date)" />
+      <entry_point TYPE="field" FQNAME="com.dicoding.myanimex.di.AppModuleKt useCaseModule" />
+      <entry_point TYPE="field" FQNAME="com.dicoding.favourites.FavouriteFragment viewModel$delegate" />
+      <entry_point TYPE="field" FQNAME="com.dicoding.myanimex.di.AppModuleKt viewModelModule" />
+      <entry_point TYPE="method" FQNAME="com.dicoding.core.data.AnimeRepository$-1 java.lang.Object createCall(kotlin.coroutines.Continuation&lt;? super kotlinx.coroutines.flow.Flow&lt;? extends com.dicoding.core.data.source.remote.network.ApiResponse&lt;? extends java.util.List&lt;? extends com.dicoding.core.data.source.remote.response.AnimeResponse&gt;&gt;&gt;&gt; $completion)" />
+      <entry_point TYPE="method" FQNAME="com.dicoding.core.data.AnimeRepository$-1 kotlinx.coroutines.flow.Flow&lt;java.util.List&lt;com.dicoding.core.domain.model.Anime&gt;&gt; loadFromDB()" />
+    </entry_points>
+    <pattern value="com.dicoding.core.ExampleUnitTest" method="addition_isCorrect" />
+    <pattern value="com.dicoding.favourites.ExampleUnitTest" method="addition_isCorrect" />
+    <pattern value="com.dicoding.myanimex.ExampleUnitTest" method="addition_isCorrect" />
+    <pattern value="com.dicoding.core.domain.model.Anime" />
+    <pattern value="com.dicoding.core.domain.model.Anime" method="Anime" />
+    <pattern value="com.dicoding.core.ui.AnimeAdapter" />
+    <pattern value="com.dicoding.core.ui.AnimeAdapter" method="AnimeAdapter" />
+    <pattern value="com.dicoding.core.data.source.local.room.AnimeDao" />
+    <pattern value="com.dicoding.core.data.source.local.room.AnimeDatabase" method="animeDao" />
+    <pattern value="com.dicoding.core.data.source.local.room.AnimeDatabase" />
+    <pattern value="com.dicoding.core.data.source.local.entity.AnimeEntity" />
+    <pattern value="com.dicoding.core.data.source.local.entity.AnimeEntity" method="AnimeEntity" />
+    <pattern value="com.dicoding.core.domain.usecase.AnimeInteractor" />
+    <pattern value="com.dicoding.core.domain.usecase.AnimeInteractor" method="AnimeInteractor" />
+    <pattern value="com.dicoding.core.data.AnimeRepository" />
+    <pattern value="com.dicoding.core.data.AnimeRepository" method="AnimeRepository" />
+    <pattern value="com.dicoding.core.data.source.remote.response.AnimeResponse" />
+    <pattern value="com.dicoding.core.data.source.remote.response.AnimeResponse" method="AnimeResponse" />
+    <pattern value="com.dicoding.core.ui.AnimeAdapter.AnimeViewHolder" />
+    <pattern value="com.dicoding.core.ui.AnimeAdapter.AnimeViewHolder" method="AnimeViewHolder" />
+    <pattern value="com.dicoding.core.data.source.remote.network.ApiResponse" />
+    <pattern value="com.dicoding.core.data.source.remote.network.ApiService" />
+    <pattern value="com.dicoding.core.utils.AppExecutors" />
+    <pattern value="com.dicoding.core.utils.AppExecutors" method="AppExecutors" />
+    <pattern value="com.dicoding.core.data.source.remote.response.Attributes" />
+    <pattern value="com.dicoding.core.data.source.remote.response.Attributes" method="Attributes" />
+    <pattern value="com.dicoding.core.ui.AnimeAdapter.AnimeViewHolder" method="bind" />
+    <pattern value="com.dicoding.core.data.source.remote.response.CoverImage" />
+    <pattern value="com.dicoding.core.data.source.remote.response.CoverImage" method="CoverImage" />
+    <pattern value="com.dicoding.core.data.NetworkBoundResource" method="createCall" />
+    <pattern value="com.dicoding.core.utils.DataMapper" />
+    <pattern value="com.dicoding.myanimex.detail.DetailAnimeActivity" />
+    <pattern value="com.dicoding.myanimex.detail.DetailAnimeViewModel" />
+    <pattern value="com.dicoding.myanimex.detail.DetailAnimeViewModel" method="DetailAnimeViewModel" />
+    <pattern value="com.dicoding.core.data.source.remote.network.ApiResponse.Empty" />
+    <pattern value="com.dicoding.core.data.Resource.Error" />
+    <pattern value="com.dicoding.core.data.source.remote.network.ApiResponse.Error" />
+    <pattern value="com.dicoding.core.data.source.remote.network.ApiResponse.Error" method="Error" />
+    <pattern value="com.dicoding.core.data.Resource.Error" method="Error" />
+    <pattern value="com.dicoding.core.ExampleInstrumentedTest" />
+    <pattern value="com.dicoding.favourites.ExampleInstrumentedTest" />
+    <pattern value="com.dicoding.myanimex.ExampleInstrumentedTest" />
+    <pattern value="com.dicoding.core.ExampleUnitTest" />
+    <pattern value="com.dicoding.favourites.ExampleUnitTest" />
+    <pattern value="com.dicoding.myanimex.ExampleUnitTest" />
+    <pattern value="com.dicoding.myanimex.detail.DetailAnimeActivity" method="fabListener" />
+    <pattern value="com.dicoding.favourites.FavouriteFragment" />
+    <pattern value="com.dicoding.favourites.FavouriteViewModel" />
+    <pattern value="com.dicoding.favourites.FavouriteViewModel" method="FavouriteViewModel" />
+    <pattern value="com.dicoding.core.data.AnimeRepository" method="getAllAnime" />
+    <pattern value="com.dicoding.core.data.source.remote.network.ApiService" method="getAnimeList" />
+    <pattern value="com.dicoding.myanimex.SplashScreen" method="getBinding" />
+    <pattern value="com.dicoding.myanimex.home.HomeFragment" />
+    <pattern value="com.dicoding.myanimex.home.HomeViewModel" />
+    <pattern value="com.dicoding.myanimex.home.HomeViewModel" method="HomeViewModel" />
+    <pattern value="com.dicoding.core.domain.repository.IAnimeRepository" />
+    <pattern value="com.dicoding.myanimex.MainActivity" />
+    <pattern value="com.dicoding.myanimex.MyApplication" />
+    <pattern value="com.dicoding.core.data.NetworkBoundResource" />
+    <pattern value="com.dicoding.myanimex.setting.SettingsFragment" />
+    <pattern value="com.dicoding.myanimex.SplashScreen" />
+    <pattern value="com.dicoding.core.data.source.remote.response.ListAnimeResponse" />
+    <pattern value="com.dicoding.core.data.source.remote.response.ListAnimeResponse" method="ListAnimeResponse" />
+    <pattern value="com.dicoding.core.data.NetworkBoundResource" method="loadFromDB" />
+    <pattern value="com.dicoding.core.data.Resource.Loading" />
+    <pattern value="com.dicoding.core.data.Resource.Loading" method="Loading" />
+    <pattern value="com.dicoding.core.data.source.local.LocalDataSource" />
+    <pattern value="com.dicoding.core.data.source.local.LocalDataSource" method="LocalDataSource" />
+    <pattern value="com.dicoding.core.utils.DataMapper" method="mapEntitiesToDomain" />
+    <pattern value="com.dicoding.core.data.NetworkBoundResource" method="onFetchFailed" />
+    <pattern value="com.dicoding.myanimex.detail.DetailAnimeActivity" method="playTrailer" />
+    <pattern value="com.dicoding.core.data.source.remote.response.PosterImage" />
+    <pattern value="com.dicoding.core.data.source.remote.response.PosterImage" method="PosterImage" />
+    <pattern value="com.dicoding.core.data.source.remote.RemoteDataSource" />
+    <pattern value="com.dicoding.core.data.source.remote.RemoteDataSource" method="RemoteDataSource" />
+    <pattern value="com.dicoding.core.data.Resource" />
+    <pattern value="com.dicoding.core.data.Resource" method="Resource" />
+    <pattern value="com.dicoding.core.data.NetworkBoundResource" method="saveCallResult" />
+    <pattern value="com.dicoding.core.ui.AnimeAdapter" method="setData" />
+    <pattern value="com.dicoding.core.domain.repository.IAnimeRepository" method="setFavoriteAnime" />
+    <pattern value="com.dicoding.core.data.source.local.LocalDataSource" method="setFavoriteAnime" />
+    <pattern value="com.dicoding.core.data.NetworkBoundResource" method="shouldFetch" />
+    <pattern value="com.dicoding.favourites.FavouriteFragment" method="showDetail" />
+    <pattern value="com.dicoding.myanimex.home.HomeFragment" method="showDetail" />
+    <pattern value="com.dicoding.core.data.Resource.Success" />
+    <pattern value="com.dicoding.core.data.source.remote.network.ApiResponse.Success" />
+    <pattern value="com.dicoding.core.data.source.remote.network.ApiResponse.Success" method="Success" />
+    <pattern value="com.dicoding.core.data.Resource.Success" method="Success" />
+    <pattern value="com.dicoding.core.ExampleInstrumentedTest" method="useAppContext" />
+    <pattern value="com.dicoding.favourites.ExampleInstrumentedTest" method="useAppContext" />
+    <pattern value="com.dicoding.myanimex.ExampleInstrumentedTest" method="useAppContext" />
+    <pattern value="com.dicoding.core.data.AnimeRepository" method="setFavoriteAnime" />
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
