@@ -11,7 +11,6 @@ import org.jetbrains.annotations.NotNull
 @Entity(tableName = "anime")
 data class AnimeEntity(
     @PrimaryKey
-    @NotNull
     @ColumnInfo(name = "id")
     var id: Int,
 

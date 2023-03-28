@@ -9,12 +9,12 @@ plugins {
 apply from: '../shared_dependencies.gradle'
 
 android {
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.dicoding.myanimex"
         minSdk 21
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
@@ -50,5 +50,8 @@ dependencies {
 
     //shimmer
     implementation "com.facebook.shimmer:shimmer:0.5.0"
+
+    //Leak Canary
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.6'
 
 }

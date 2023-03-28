@@ -39,7 +39,7 @@ class HomeFragment : Fragment() {
             val animeAdapter = AnimeAdapter { item -> showDetail(item) }
                 (activity as MainActivity).supportActionBar?.title = getString(R.string.menu_home)
 
-            homeViewModel.anime.observe(viewLifecycleOwner, { anime ->
+            homeViewModel.anime.observe(viewLifecycleOwner) { anime ->
                 if (anime != null) {
                     when (anime) {
                         is Resource.Loading -> progress_bar.visibility = View.VISIBLE
@@ -47,16 +47,16 @@ class HomeFragment : Fragment() {
                             progress_bar.visibility = View.GONE
                             animeAdapter.setData(anime.data)
                         }
-                        is  Resource.Error -> {
+                        is Resource.Error -> {
                             progress_bar.visibility = View.GONE
                             view_error.visibility = View.VISIBLE
                             tv_error.text = anime.message ?: getString(R.string.something_wrong)
                         }
                     }
                 }
-            })
+            }
 
-            with(rv_anime) {
+                with(rv_anime) {
                 layoutManager = GridLayoutManager(requireContext(), 2)
                 setHasFixedSize(true)
                 adapter = animeAdapter
