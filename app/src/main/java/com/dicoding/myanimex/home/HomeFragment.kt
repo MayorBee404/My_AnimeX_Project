@@ -9,26 +9,30 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.dicoding.core.data.Resource
 import com.dicoding.myanimex.R
-
 import com.dicoding.core.domain.model.Anime
 import com.dicoding.core.ui.AnimeAdapter
 import com.dicoding.myanimex.MainActivity
+import com.dicoding.myanimex.databinding.FragmentHomeBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
-import kotlinx.android.synthetic.main.fragment_home.*
-import kotlinx.android.synthetic.main.view_error.*
 import timber.log.Timber
 
 
 class HomeFragment : Fragment() {
 
     private val homeViewModel: HomeViewModel by viewModel()
+    private var _binding: FragmentHomeBinding? = null
+
+    // with the backing property of the kotlin we extract
+    // the non null value of the _binding
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -42,21 +46,23 @@ class HomeFragment : Fragment() {
             homeViewModel.anime.observe(viewLifecycleOwner) { anime ->
                 if (anime != null) {
                     when (anime) {
-                        is Resource.Loading -> progress_bar.visibility = View.VISIBLE
+                        is Resource.Loading -> binding.progressBar.visibility = View.VISIBLE
                         is Resource.Success -> {
-                            progress_bar.visibility = View.GONE
                             animeAdapter.setData(anime.data)
+                            binding.progressBar.visibility = View.GONE
                         }
                         is Resource.Error -> {
-                            progress_bar.visibility = View.GONE
-                            view_error.visibility = View.VISIBLE
-                            tv_error.text = anime.message ?: getString(R.string.something_wrong)
+                            binding.progressBar.visibility = View.GONE
+                            binding.viewError.apply {
+                                view.visibility = View.VISIBLE
+                            }
+                            binding.viewError.tvError.text = anime.message ?: getString(R.string.something_wrong)
                         }
                     }
                 }
             }
 
-                with(rv_anime) {
+                with(binding.rvAnime) {
                 layoutManager = GridLayoutManager(requireContext(), 2)
                 setHasFixedSize(true)
                 adapter = animeAdapter

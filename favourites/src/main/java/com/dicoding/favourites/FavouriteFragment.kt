@@ -10,8 +10,8 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.dicoding.core.domain.model.Anime
 import com.dicoding.core.ui.AnimeAdapter
+import com.dicoding.favourites.databinding.FragmentFavouriteBinding
 import com.dicoding.myanimex.MainActivity
-import kotlinx.android.synthetic.main.fragment_favourite.*
 import org.koin.core.context.loadKoinModules
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -20,15 +20,19 @@ import timber.log.Timber
 class FavouriteFragment : Fragment() {
 
     private val viewModel: FavouriteViewModel by viewModel()
+    private var _binding: FragmentFavouriteBinding? = null
+
+    // with the backing property of the kotlin we extract
+    // the non null value of the _binding
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_favourite, container, false)
+        _binding = FragmentFavouriteBinding.inflate(inflater, container, false)
         loadKoinModules(favoriteModule)
-
-        return view
+        return binding.root
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -39,10 +43,12 @@ class FavouriteFragment : Fragment() {
 
             viewModel.favoriteAnime.observe(viewLifecycleOwner) { anime ->
                 animeAdapter.setData(anime)
-                view_empty.visibility = if (anime.isNotEmpty()) View.GONE else View.VISIBLE
+                binding.viewEmpty.apply {
+                    view.visibility = if (anime.isNotEmpty()) View.GONE else View.VISIBLE
+                }
             }
 
-            with(rv_anime) {
+            with(binding.rvAnime) {
                 layoutManager = GridLayoutManager(requireContext(), 2)
                 setHasFixedSize(true)
                 adapter = animeAdapter
