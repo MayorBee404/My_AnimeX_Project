@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="IconLocation">
+        <ignore path="/Users/AdminGanteng/Documents/AndroidStudioProjects/My_AnimeX_Project/app/src/main/res/drawable/seekpng_1.png" />
+    </issue>
+</lint>
