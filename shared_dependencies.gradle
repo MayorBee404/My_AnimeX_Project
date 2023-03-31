@@ -10,9 +10,9 @@ dependencies {
     implementation "com.airbnb.android:lottie:3.4.2"
 
     //navigation
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.2'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.5.2'
-    api "androidx.navigation:navigation-dynamic-features-fragment:2.5.2"
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.2'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.3'
+    api "androidx.navigation:navigation-dynamic-features-fragment:2.3.3"
 
     //koin
     implementation "io.insert-koin:koin-android:3.2.1"

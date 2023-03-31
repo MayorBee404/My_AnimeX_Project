@@ -37,6 +37,35 @@
       </map>
     </option>
   </component>
+  <component name="EntryPointsManager">
+    <entry_points version="2.0">
+      <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/dicoding/myanimex/binding/ActivityBinding.kt" />
+      <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/dicoding/myanimex/di/AppModule.kt" />
+      <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/app/src/main/java/com/dicoding/myanimex/binding/BindingAdapters.kt" />
+      <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/core/src/main/java/com/dicoding/core/binding/BindingAdapters.kt" />
+      <entry_point TYPE="method" FQNAME="com.dicoding.myanimex.binding.ActivityBindingKt void bindToolbarWithTitle(androidx.appcompat.widget.Toolbar toolbar, androidx.appcompat.app.AppCompatActivity activity, java.lang.String title)" />
+      <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/core/src/main/java/com/dicoding/core/di/CoreModule.kt" />
+      <entry_point TYPE="field" FQNAME="com.dicoding.core.di.CoreModuleKt databaseModule" />
+      <entry_point TYPE="field" FQNAME="com.dicoding.myanimex.detail.DetailAnimeActivity detailViewModel$delegate" />
+      <entry_point TYPE="field" FQNAME="com.dicoding.myanimex.home.HomeFragment homeViewModel$delegate" />
+      <entry_point TYPE="field" FQNAME="com.dicoding.core.di.CoreModuleKt networkModule" />
+      <entry_point TYPE="field" FQNAME="com.dicoding.core.di.CoreModuleKt repositoryModule" />
+      <entry_point TYPE="method" FQNAME="com.dicoding.core.data.AnimeRepository$-1 java.lang.Object saveCallResult(java.util.List&lt;com.dicoding.core.data.source.remote.response.AnimeResponse&gt; data, kotlin.coroutines.Continuation&lt;? super kotlin.Unit&gt; $completion)" />
+      <entry_point TYPE="method" FQNAME="com.dicoding.myanimex.binding.BindingAdaptersKt void setRating(android.widget.RatingBar ratingBar, double rating)" />
+      <entry_point TYPE="method" FQNAME="com.dicoding.myanimex.binding.BindingAdaptersKt void setRatingText(android.widget.TextView text, double rating)" />
+      <entry_point TYPE="method" FQNAME="com.dicoding.core.data.AnimeRepository$-1 boolean shouldFetch(java.util.List&lt;com.dicoding.core.domain.model.Anime&gt; data)" />
+      <entry_point TYPE="method" FQNAME="com.dicoding.myanimex.binding.BindingAdaptersKt void showImage(android.widget.ImageView imgView, java.lang.String url)" />
+      <entry_point TYPE="method" FQNAME="com.dicoding.core.binding.BindingAdaptersKt void showImage(android.widget.ImageView imgView, java.lang.String url)" />
+      <entry_point TYPE="method" FQNAME="com.dicoding.myanimex.binding.ActivityBindingKt void simpleToolbarWithHome(androidx.appcompat.app.AppCompatActivity $this$simpleToolbarWithHome, androidx.appcompat.widget.Toolbar toolbar, java.lang.String title_)" />
+      <entry_point TYPE="field" FQNAME="com.dicoding.myanimex.SplashScreen SPLASH_DELAY" />
+      <entry_point TYPE="method" FQNAME="com.dicoding.myanimex.binding.BindingAdaptersKt void startDate(android.widget.TextView textView, java.lang.String date)" />
+      <entry_point TYPE="field" FQNAME="com.dicoding.myanimex.di.AppModuleKt useCaseModule" />
+      <entry_point TYPE="field" FQNAME="com.dicoding.favourites.FavouriteFragment viewModel$delegate" />
+      <entry_point TYPE="field" FQNAME="com.dicoding.myanimex.di.AppModuleKt viewModelModule" />
+      <entry_point TYPE="method" FQNAME="com.dicoding.core.data.AnimeRepository$-1 java.lang.Object createCall(kotlin.coroutines.Continuation&lt;? super kotlinx.coroutines.flow.Flow&lt;? extends com.dicoding.core.data.source.remote.network.ApiResponse&lt;? extends java.util.List&lt;? extends com.dicoding.core.data.source.remote.response.AnimeResponse&gt;&gt;&gt;&gt; $completion)" />
+      <entry_point TYPE="method" FQNAME="com.dicoding.core.data.AnimeRepository$-1 kotlinx.coroutines.flow.Flow&lt;java.util.List&lt;com.dicoding.core.domain.model.Anime&gt;&gt; loadFromDB()" />
+    </entry_points>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
