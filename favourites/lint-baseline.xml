@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="5" by="lint Dolphin | 2021.3.1 Patch 1">
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort.">
+        <location
+            file="src/main/java/com/dicoding/core/ui/AnimeAdapter.kt"
+            line="19"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 23">
+        <location
+            file="src/main/res/values/themes.xml"
+            line="14"/>
+    </issue>
+
+    <issue
+        id="VectorPath"
+        message="Very long vector path (8534 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.">
+        <location
+            file="src/main/res/drawable/ic_build.xml"
+            line="7"/>
+    </issue>
+
+    <issue
+        id="VectorPath"
+        message="Very long vector path (940 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.">
+        <location
+            file="src/main/res/drawable/ic_language.xml"
+            line="4"/>
+    </issue>
+
+    <issue
+        id="VectorPath"
+        message="Very long vector path (24232 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.">
+        <location
+            file="src/main/res/drawable/ic_my_animex.xml"
+            line="7"/>
+    </issue>
+
+    <issue
+        id="VectorPath"
+        message="Very long vector path (904 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.">
+        <location
+            file="src/main/res/drawable/ic_settings.xml"
+            line="4"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/primaryLightColor` with a theme that also paints a background (inferred theme is `@style/Theme.MyAnimeX`)">
+        <location
+            file="../app/src/main/res/layout/activity_splash_screen.xml"
+            line="8"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.array.reply_entries` appears to be unused">
+        <location
+            file="../app/src/main/res/values/arrays.xml"
+            line="3"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.array.reply_values` appears to be unused">
+        <location
+            file="../app/src/main/res/values/arrays.xml"
+            line="8"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.xml.backup_rules` appears to be unused">
+        <location
+            file="../app/src/main/res/xml/backup_rules.xml"
+            line="8"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.primaryTextColor` appears to be unused">
+        <location
+            file="../app/src/main/res/values/colors.xml"
+            line="7"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.xml.data_extraction_rules` appears to be unused">
+        <location
+            file="../app/src/main/res/xml/data_extraction_rules.xml"
+            line="6"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_launcher_background` appears to be unused">
+        <location
+            file="../app/src/main/res/drawable/ic_launcher_background.xml"
+            line="2"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.ic_launcher_background` appears to be unused">
+        <location
+            file="../app/src/main/res/values/ic_launcher_background.xml"
+            line="3"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.mipmap.ic_launcher_foreground` appears to be unused">
+        <location
+            file="../app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png"/>
+        <location
+            file="../app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png"/>
+        <location
+            file="../app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png"/>
+        <location
+            file="../app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png"/>
+        <location
+            file="../app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_launcher_foreground` appears to be unused">
+        <location
+            file="../app/src/main/res/drawable-v24/ic_launcher_foreground.xml"
+            line="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_search` appears to be unused">
+        <location
+            file="../app/src/main/res/drawable/ic_search.xml"
+            line="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.layout.nav_header_main` appears to be unused">
+        <location
+            file="../app/src/main/res/layout/nav_header_main.xml"
+            line="2"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.search` appears to be unused">
+        <location
+            file="../app/src/main/res/values/strings.xml"
+            line="9"/>
+        <location
+            file="../app/src/main/res/values-en/strings.xml"
+            line="9"/>
+        <location
+            file="../app/src/main/res/values-in/strings.xml"
+            line="9"/>
+        <location
+            file="../core/src/main/res/values/strings.xml"
+            line="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.title_favorite` appears to be unused">
+        <location
+            file="../app/src/main/res/values/strings.xml"
+            line="15"/>
+        <location
+            file="../app/src/main/res/values-en/strings.xml"
+            line="14"/>
+        <location
+            file="../app/src/main/res/values-in/strings.xml"
+            line="15"/>
+        <location
+            file="../core/src/main/res/values/strings.xml"
+            line="16"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.title_favourite` appears to be unused">
+        <location
+            file="../app/src/main/res/values/strings.xml"
+            line="19"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.signature_title` appears to be unused">
+        <location
+            file="../app/src/main/res/values/strings.xml"
+            line="24"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.reply_title` appears to be unused">
+        <location
+            file="../app/src/main/res/values/strings.xml"
+            line="25"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.sync_title` appears to be unused">
+        <location
+            file="../app/src/main/res/values/strings.xml"
+            line="28"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.attachment_title` appears to be unused">
+        <location
+            file="../app/src/main/res/values/strings.xml"
+            line="29"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.attachment_summary_on` appears to be unused">
+        <location
+            file="../app/src/main/res/values/strings.xml"
+            line="30"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.attachment_summary_off` appears to be unused">
+        <location
+            file="../app/src/main/res/values/strings.xml"
+            line="32"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.style.AppTheme` appears to be unused">
+        <location
+            file="../app/src/main/res/values/styles.xml"
+            line="3"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.style.AppTheme_AppBarOverlay` appears to be unused">
+        <location
+            file="../app/src/main/res/values/styles.xml"
+            line="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.style.AppTheme_PopupOverlay` appears to be unused">
+        <location
+            file="../app/src/main/res/values/styles.xml"
+            line="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.menu.top_menu` appears to be unused">
+        <location
+            file="../app/src/main/res/menu/top_menu.xml"
+            line="2"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/seekpng_1.png` in densityless folder">
+        <location
+            file="src/main/res/drawable/seekpng_1.png"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location
+            file="src/main/res/layout/activity_detail_anime.xml"
+            line="73"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location
+            file="src/main/res/layout/activity_splash_screen.xml"
+            line="10"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location
+            file="src/main/res/layout/activity_splash_screen.xml"
+            line="30"/>
+    </issue>
+
+</issues>
