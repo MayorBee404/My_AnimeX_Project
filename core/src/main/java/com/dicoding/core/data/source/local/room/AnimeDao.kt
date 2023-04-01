@@ -9,15 +9,15 @@ import kotlinx.coroutines.flow.Flow
 interface AnimeDao {
 
     @Query("SELECT * FROM anime")
-    fun getAllAnime(): Flow<List<com.dicoding.core.data.source.local.entity.AnimeEntity>>
+    fun getAllAnime(): Flow<List<AnimeEntity>>
 
     @Query("SELECT * FROM anime where isFavorite = 1")
-    fun getFavoriteAnime(): Flow<List<com.dicoding.core.data.source.local.entity.AnimeEntity>>
+    fun getFavoriteAnime(): Flow<List<AnimeEntity>>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insertAnime(anime: List<com.dicoding.core.data.source.local.entity.AnimeEntity>)
+    suspend fun insertAnime(anime: List<AnimeEntity>)
 
     @Update
-    fun updateFavoriteAnime(anime: com.dicoding.core.data.source.local.entity.AnimeEntity)
+    fun updateFavoriteAnime(anime: AnimeEntity)
 
 }

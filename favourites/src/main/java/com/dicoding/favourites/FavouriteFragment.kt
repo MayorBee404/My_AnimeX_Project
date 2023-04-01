@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.dicoding.core.domain.model.Anime
 import com.dicoding.core.ui.AnimeAdapter
+import com.dicoding.favourites.databinding.FragmentFavouriteBinding
 import com.dicoding.myanimex.MainActivity
 import kotlinx.android.synthetic.main.fragment_favourite.*
 import org.koin.core.context.loadKoinModules
@@ -37,15 +38,19 @@ class FavouriteFragment : Fragment() {
             val animeAdapter = AnimeAdapter { item -> showDetail(item) }
             (activity as MainActivity).supportActionBar?.title = getString(com.dicoding.myanimex.R.string.menu_favorite)
 
-            viewModel.favoriteAnime.observe(viewLifecycleOwner, { anime ->
+            viewModel.favoriteAnime.observe(viewLifecycleOwner) { anime ->
                 animeAdapter.setData(anime)
-                view_empty.visibility = if (anime.isNotEmpty()) View.GONE else View.VISIBLE
-            })
-
-            with(rv_anime) {
-                layoutManager = GridLayoutManager(requireContext(), 2)
-                setHasFixedSize(true)
-                adapter = animeAdapter
+                if (anime.isEmpty()){
+                    view_empty.visibility = View.VISIBLE
+                    rv_anime.visibility = View.GONE
+                } else {
+                    view_empty.visibility = View.GONE
+                    with(rv_anime) {
+                        layoutManager = GridLayoutManager(requireContext(), 2)
+                        setHasFixedSize(true)
+                        adapter = animeAdapter
+                    }
+                }
             }
         }
     }
@@ -54,6 +59,6 @@ class FavouriteFragment : Fragment() {
         Timber.d("OnClick : ${anime.canonicalTitle}")
         findNavController().navigate(
             FavouriteFragmentDirections.actionFavoriteFragmentToDetailAnimeActivity(anime)
-            )
+        )
     }
 }

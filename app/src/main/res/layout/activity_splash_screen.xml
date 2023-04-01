@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SplashScreen"
-    android:background="@color/primaryLightColor">
+    android:background="@color/primaryLightColor"
+    tools:ignore="Overdraw">
 
     <ImageView
         android:layout_width="200dp"
@@ -14,7 +15,8 @@
         android:background="@drawable/ic_my_animex"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView" />
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        android:contentDescription="@string/app_name" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -34,6 +36,7 @@
         android:background="@drawable/ic_build"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView" />
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        android:contentDescription="@string/app_name" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
