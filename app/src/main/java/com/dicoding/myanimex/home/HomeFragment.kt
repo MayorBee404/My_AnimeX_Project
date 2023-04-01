@@ -46,6 +46,12 @@ class HomeFragment : Fragment() {
                         is Resource.Success -> {
                             progress_bar.visibility = View.GONE
                             animeAdapter.setData(anime.data)
+                            with(rv_anime) {
+                                layoutManager = GridLayoutManager(requireContext(), 2)
+                                setHasFixedSize(true)
+                                adapter = animeAdapter
+
+                            }
                         }
                         is Resource.Error -> {
                             progress_bar.visibility = View.GONE
@@ -54,13 +60,6 @@ class HomeFragment : Fragment() {
                         }
                     }
                 }
-            }
-
-                with(rv_anime) {
-                layoutManager = GridLayoutManager(requireContext(), 2)
-                setHasFixedSize(true)
-                adapter = animeAdapter
-
             }
         }
     }

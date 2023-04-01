@@ -74,7 +74,6 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/iv_item_image2"
                 android:layout_width="0dp"
                 android:layout_height="300dp"
                 android:background="#DDDDDD"
@@ -95,7 +94,6 @@
                 app:layout_constraintStart_toStartOf="parent">
 
                 <TextView
-                    android:id="@+id/tv_item_title2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"

@@ -16,7 +16,6 @@ class AnimeAdapter(private val showDetail: (Anime) -> Unit) :
         if (newListData == null) return
         listData.clear()
         listData.addAll(newListData)
-        notifyDataSetChanged()
     }
 
     override fun onCreateViewHolder(

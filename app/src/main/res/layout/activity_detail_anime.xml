@@ -78,7 +78,8 @@
             app:layout_anchor="@id/app_bar"
             app:layout_anchorGravity="bottom|end"
             style="@style/Theme.MyAnimeX"
-            tools:srcCompat="@android:drawable/ic_dialog_email" />
+            tools:srcCompat="@android:drawable/ic_dialog_email"
+            android:contentDescription="@string/favourite" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
